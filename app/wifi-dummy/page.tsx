@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import Image from "next/image";
+import Link from "next/link";
 
 type Update = {
   slug: string;
@@ -94,6 +95,10 @@ export default function WifiDummyPage() {
         />
       </div>
 
+      <Link className="menu-link" href="/">
+        ← Back to menu
+      </Link>
+
       <section className="updates-list" aria-label="WiFi Dummy project updates">
         {updates.map((update) => (
           <article className="update-card" key={update.slug}>
@@ -124,6 +129,16 @@ export default function WifiDummyPage() {
           </article>
         ))}
       </section>
+
+      <a
+        className="discord-cta"
+        href="https://discord.gg/xs5jfmKEU"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image src="/omnihilumlogodiscord.png" alt="" width={500} height={500} />
+        <span>Join our Discord</span>
+      </a>
     </main>
   );
 }

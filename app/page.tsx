@@ -41,6 +41,20 @@ export default function Home() {
               sizes="(max-width: 600px) 25vw, 180px"
             />
           </div>
+          <a
+            className="discord-tile"
+            href="https://discord.gg/xs5jfmKEU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/omnihilumlogodiscord.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <span>JOIN US</span>
+          </a>
         </aside>
       </div>
     </main>
